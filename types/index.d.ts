@@ -20,3 +20,8 @@ interface DocumentListProps {
   level?: number;
   data?: Doc<"documents">[];
 }
+
+interface ConfirmModalProps {
+  children: React.ReactNode;
+  onConfirmAction: () => void;
+}
