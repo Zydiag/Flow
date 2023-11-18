@@ -25,3 +25,11 @@ interface ConfirmModalProps {
   children: React.ReactNode;
   onConfirmAction: () => void;
 }
+
+//search
+type SearchState = {
+  isOpen: boolean;
+  onOpen: () => void;
+  onClose: () => void;
+  toggle: () => void;
+};
