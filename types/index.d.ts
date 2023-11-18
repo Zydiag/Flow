@@ -40,3 +40,9 @@ type SettingsState = {
   onOpen: () => void;
   onClose: () => void;
 };
+
+//navbar
+interface NavbarProps {
+  isCollapsed: boolean;
+  onResetWidth: () => void;
+}
