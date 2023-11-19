@@ -33,3 +33,10 @@ type SearchState = {
   onClose: () => void;
   toggle: () => void;
 };
+
+//settings
+type SettingsState = {
+  isOpen: boolean;
+  onOpen: () => void;
+  onClose: () => void;
+};
