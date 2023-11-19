@@ -9,6 +9,8 @@ import { useSettings } from "@/hooks/use-settings";
 export const SettingsModal = () => {
   const settings = useSettings();
 
+  //not using hydration trick here
+
   return (
     <Dialog open={settings.isOpen} onOpenChange={settings.onClose}>
       <DialogContent>
