@@ -50,3 +50,7 @@ interface NavbarProps {
 interface TitleProps {
   initialData: Doc<"documents">;
 }
+
+interface BannerProps {
+  documentId: Id<"documents">;
+}
