@@ -54,3 +54,23 @@ interface TitleProps {
 interface BannerProps {
   documentId: Id<"documents">;
 }
+interface MenuProps {
+  documentId: Id<"documents">;
+}
+
+interface DocumentIdPageProps {
+  params: {
+    documentId: Id<"documents">;
+  };
+}
+
+interface ToolbarProps {
+  initialData: Doc<"documents">;
+  preview?: boolean;
+}
+
+interface IconPickerProps {
+  onChange: (icon: string) => void;
+  children: React.ReactNode;
+  asChild?: boolean;
+}
