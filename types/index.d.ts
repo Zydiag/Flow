@@ -46,3 +46,7 @@ interface NavbarProps {
   isCollapsed: boolean;
   onResetWidth: () => void;
 }
+
+interface TitleProps {
+  initialData: Doc<"documents">;
+}
