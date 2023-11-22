@@ -70,7 +70,13 @@ interface ToolbarProps {
 }
 
 interface IconPickerProps {
-  onChange: (icon: string) => void;
+  onChangeAction: (icon: string) => void;
   children: React.ReactNode;
   asChild?: boolean;
+}
+
+interface CoverImageStore {
+  isOpen: boolean;
+  onOpen: () => void;
+  onClose: () => void;
 }
