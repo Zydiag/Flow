@@ -1,6 +1,11 @@
 "use client";
 
-import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 import { useCoverImage } from "@/hooks/use-cover-image";
 import { SingleImageDropzone } from "../single-image-dropzone";
@@ -32,8 +37,12 @@ export const CoverImageModal = () => {
       setIsSubmitting(true);
       setFile(file);
 
-      const res = await edgestore.publicFiles.upload({ file });
-
+      const res = await edgestore.publicFiles.upload({
+        file,
+        options: {
+          replaceTargetUrl: coverImage.url,
+        },
+      });
       await update({
         documentId: params.documentId as Id<"documents">,
         coverImage: res.url,
@@ -47,7 +56,9 @@ export const CoverImageModal = () => {
     <Dialog open={coverImage.isOpen} onOpenChange={coverImage.onClose}>
       <DialogContent>
         <DialogHeader className="">
-          <h2 className="text-center text-lg font-semibold">Cover Image</h2>
+          <DialogTitle>
+            <h2 className="text-center text-lg font-semibold">Cover Image</h2>
+          </DialogTitle>
         </DialogHeader>
         <SingleImageDropzone
           className="w-full outline-none"

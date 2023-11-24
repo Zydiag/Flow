@@ -76,7 +76,14 @@ interface IconPickerProps {
 }
 
 interface CoverImageStore {
+  url?: string;
   isOpen: boolean;
   onOpen: () => void;
   onClose: () => void;
+  onReplace: (url: string) => void;
+}
+
+interface CoverImageProps {
+  url?: string;
+  preview?: boolean;
 }
