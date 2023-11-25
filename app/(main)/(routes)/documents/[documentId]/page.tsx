@@ -1,7 +1,8 @@
 "use client";
 
-// @ts-nocheck
 import { Cover } from "@/components/cover";
+// @ts-ignore
+import Editor from "@/components/editor";
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
 
