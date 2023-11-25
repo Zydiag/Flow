@@ -20,6 +20,7 @@ const DocumentIdPage = () => {
   });
 
   const Editor = useMemo(
+    // @ts-ignore
     () => dynamic(() => import("@/components/editor"), { ssr: false }),
     [],
   );
@@ -56,6 +57,7 @@ const DocumentIdPage = () => {
       <div className="md:max-w-3xl lg:max-w-4xl mx-auto">
         <Toolbar initialData={document} />
         <Editor
+          // @ts-ignore
           onChangeAction={handleChange}
           initialContent={document.content}
         />
