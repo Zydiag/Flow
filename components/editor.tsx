@@ -1,24 +1,13 @@
 "use client";
 
-import {
-  Block,
-  BlockNoteEditor,
-  filterSuggestionItems,
-  PartialBlock,
-} from "@blocknote/core";
-import { BlockNoteSchema, combineByGroup, locales } from "@blocknote/core";
+import { BlockNoteEditor, PartialBlock } from "@blocknote/core";
 
 import { BlockNoteView } from "@blocknote/mantine";
 import "@blocknote/mantine/style.css";
 
 import { EditorPorps } from "@/types";
-import { useState } from "react";
 import { useTheme } from "next-themes";
-import {
-  SuggestionMenuController,
-  getDefaultReactSlashMenuItems,
-  useCreateBlockNote,
-} from "@blocknote/react";
+import { SuggestionMenuController, useCreateBlockNote } from "@blocknote/react";
 import { useEdgeStore } from "@/lib/edgestore";
 
 export const Editor = ({
@@ -42,7 +31,6 @@ export const Editor = ({
 
   const { edgestore } = useEdgeStore();
 
-  const [blocks, setBlocks] = useState<Block[]>();
   return (
     <div>
       <BlockNoteView

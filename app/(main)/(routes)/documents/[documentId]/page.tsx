@@ -20,7 +20,6 @@ const DocumentIdPage = () => {
   });
 
   const Editor = useMemo(
-    // @ts-ignore
     () => dynamic(() => import("@/components/editor"), { ssr: false }),
     [],
   );
