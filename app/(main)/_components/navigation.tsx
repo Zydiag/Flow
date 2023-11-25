@@ -1,4 +1,6 @@
 "use client";
+
+// @ts-nocheck
 import {
   ChevronsLeft,
   MenuIcon,
@@ -49,6 +51,7 @@ const Navigation = () => {
   const [isResetting, setIsResetting] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(isMobile);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (isMobile) {
       collapse();

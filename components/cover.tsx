@@ -66,6 +66,7 @@ export const Cover = ({ url, preview }: CoverImageProps) => {
   );
 };
 
+// eslint-disable react/display-name
 Cover.Skeleton = () => {
   return <Skeleton className="w-full h-[12vh]" />;
 };

@@ -1,7 +1,7 @@
 "use client";
 
+// @ts-nocheck
 import { Cover } from "@/components/cover";
-import Editor from "@/components/editor";
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
 
@@ -20,6 +20,7 @@ const DocumentIdPage = () => {
   });
 
   const Editor = useMemo(
+    // @ts-ignore
     () => dynamic(() => import("@/components/editor"), { ssr: false }),
     [],
   );

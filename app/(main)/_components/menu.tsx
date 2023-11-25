@@ -58,5 +58,5 @@ export const Menu = ({ documentId }: MenuProps) => {
 };
 
 Menu.Skeleton = () => {
-  return <Skeleton className="h-10 w-10 " />;
+  return <Skeleton className="h-10 w-10 "></Skeleton>;
 };
