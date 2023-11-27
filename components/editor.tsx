@@ -5,16 +5,16 @@ import { BlockNoteEditor, PartialBlock } from "@blocknote/core";
 import { BlockNoteView } from "@blocknote/mantine";
 import "@blocknote/mantine/style.css";
 
-import { EditorPorps } from "@/types";
 import { useTheme } from "next-themes";
 import { SuggestionMenuController, useCreateBlockNote } from "@blocknote/react";
 import { useEdgeStore } from "@/lib/edgestore";
+import { EditorProps } from "@/types";
 
 export const Editor = ({
   onChangeAction,
   initialContent,
   editable,
-}: EditorPorps) => {
+}: EditorProps) => {
   const handleUploadImage = async (file: File) => {
     const res = await edgestore.publicFiles.upload({ file });
     return res.url;

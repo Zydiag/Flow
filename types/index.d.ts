@@ -88,7 +88,7 @@ interface CoverImageProps {
   preview?: boolean;
 }
 
-interface EditorPorps {
+interface EditorProps {
   onChangeAction: (value: string) => void;
   initialContent?: string;
   editable?: boolean;
