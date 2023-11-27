@@ -9,7 +9,7 @@ import { useMutation, useQuery } from "convex/react";
 import { useParams } from "next/navigation";
 import dynamic from "next/dynamic";
 
-export const Editor = dynamic(
+const Editor = dynamic(
   () =>
     Promise.resolve(import("@/components/editor").then((mod) => mod.Editor)),
   {
@@ -55,7 +55,7 @@ const DocumentIdPage = () => {
           editable={true}
           onChangeAction={async (content) => {
             await update({
-              id: documentId,
+              documentId,
               content,
             });
           }}
