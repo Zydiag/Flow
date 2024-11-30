@@ -1,4 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Motion - A Modern Project Management Platform
+
+A sleek and intuitive project management platform built with Next.js 14, featuring a beautiful UI and smooth animations. This project provides a comprehensive solution for managing tasks, projects, and team collaboration.
+
+## Features
+
+- 🎨 Modern and responsive design
+- ⚡ Real-time updates and interactions
+- 🔐 Secure authentication
+- 📱 Mobile-friendly interface
+- 🎭 Beautiful animations and transitions
+
+## Tech Stack
+
+- Next.js 
+- TypeScript
+- Tailwind CSS
+- Prisma
+- MySQL
+- Clerk Authentication
+
+## Acknowledgments
+
+Special thanks to [CodeWithAntonio](https://youtube.com/@codewithantonio) for the inspiration and guidance in building this project. His tutorials and teaching style have been invaluable in creating this application.
 
 ## Getting Started
 
@@ -18,7 +41,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
 
